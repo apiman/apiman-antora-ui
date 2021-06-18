@@ -261,3 +261,12 @@ body {
     background: var(--navbar-menu_hover-background);
   }
 }
+
+#apiman-logo {
+  background-image: url("../img/apiman/logo-header-v2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  /* width of the image */
+  width: 120px;
+  margin-left: 1rem;
+}
