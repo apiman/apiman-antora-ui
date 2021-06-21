@@ -1,0 +1,30 @@
+name: Build latest Antora theme bundle artifact and commit back into repo.
+
+on:
+  push:
+    branches: [master]
+    paths-ignore:
+      - 'build'
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.5
+        with:
+          # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
+          node-version: 14.x
+      
+      - run: npm ci --save-dev
+      
+      - run: gulp bundle
+                
+      - name: Commit lastest bundle build back into the repo
+        uses: EndBug/add-and-commit@v7.2.1
+        with:
+          message: Commit latest Antora Apiman UI bundle
+          add: ./build/ui-bundle.zip --force
