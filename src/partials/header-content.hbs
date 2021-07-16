@@ -9,6 +9,11 @@
         <span></span>
       </button>
     </div>
+    {{#if env.ALGOLIA_API_KEY}}
+      <div class="navbar-item hide-for-print">
+        <input id="search-input" type="text" placeholder="Search docs">
+      </div>
+    {{/if}}
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
         <a class="navbar-item" href="https://www.apiman.io/latest/index.html">Home</a>

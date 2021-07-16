@@ -1,1 +1,7 @@
-    {{!-- Add additional meta tags here --}}
+{{!-- Add additional meta tags here --}}
+<link rel="stylesheet" href="{{uiRootPath}}/css/site-extra.css">
+{{#if env.ALGOLIA_API_KEY}}
+<link rel="stylesheet" href="{{uiRootPath}}/css/vendor/docsearch.min.css">
+<link rel="stylesheet" href="{{uiRootPath}}/js/vendor/docsearch.min.js">
+{{/if}}
+<link rel="icon" href="{{siteRootPath}}/favicon.ico" type="image/x-icon">
