@@ -1,4 +1,5 @@
 = Hardware and Software Requirements
+
 Author Name
 :idprefix:
 :idseparator: -
@@ -16,6 +17,52 @@ Integer diam enim, dignissim eget eros et, ultricies mattis odio.
 Vestibulum consectetur nec urna a luctus.
 Quisque pharetra tristique arcu fringilla dapibus.
 https://example.org[Curabitur,role=unresolved] ut massa aliquam, cursus enim et, accumsan lectus.
+
+
+
+== Tabsset
+[tabset]
+====
+
+Tab A::
++
+--
+[discrete]
+== A section
+
+With an explanation!
+--
+
+Tab B::
++
+--
+[discrete]
+== A section
+
+With no explanation?
+--
+
+Tab C::
++
+--
+* A multilevel list
+** level 2
+*** level 3
+** level 2
+* level 1
+--
+
+Tab D::
++
+--
+A multilevel description list::
+It's all about descriptions!
+2nd Level:::
+With lots of details!
+3rd Level::::
+And nit-picky micro-details!
+--
+====
 
 == Cu solet
 
