@@ -6,7 +6,7 @@ Error.call = (self, ...args) => {
   return Object.assign(self, { message: err.message, stack: err.stack })
 }
 
-const asciidoctor = require('asciidoctor.js')()
+const asciidoctor = require('asciidoctor')()
 const fs = require('fs-extra')
 const handlebars = require('handlebars')
 const merge = require('merge-stream')
@@ -18,7 +18,11 @@ const map = (transform = () => {}, flush = undefined) => new Transform({ objectM
 const vfs = require('vinyl-fs')
 const yaml = require('js-yaml')
 
-const ASCIIDOC_ATTRIBUTES = { experimental: '', icons: 'font', sectanchors: '', 'source-highlighter': 'highlight.js' }
+const registry = asciidoctor.Extensions.create()
+require('../../docs/lib/openblock').register(registry)
+require('../../docs/lib/tabs-block').register(registry)
+
+const ASCIIDOC_ATTRIBUTES = { experimental: '', icons: 'font', tabs: 'tabs', sectanchors: '', 'source-highlighter': 'highlight.js' }
 
 module.exports = (src, previewSrc, previewDest, sink = () => map()) => (done) =>
   Promise.all([
@@ -42,7 +46,7 @@ module.exports = (src, previewSrc, previewDest, sink = () => map()) => (done) =>
             if (file.stem === '404') {
               uiModel.page = { layout: '404', title: 'Page Not Found' }
             } else {
-              const doc = asciidoctor.load(file.contents, { safe: 'safe', attributes: ASCIIDOC_ATTRIBUTES })
+              const doc = asciidoctor.load(file.contents, { safe: 'safe', attributes: ASCIIDOC_ATTRIBUTES, extension_registry: registry })
               uiModel.page.attributes = Object.entries(doc.getAttributes())
                 .filter(([name, val]) => name.startsWith('page-'))
                 .reduce((accum, [name, val]) => {

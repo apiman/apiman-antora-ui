@@ -18,6 +18,50 @@
   --color-jet-70: #222;
   --color-jet-80: #191919;
   --color-black: #000;
+
+  /* Tabs extentions */ 
+  --tab-inactive-background: var(--color-smoke-50);
+  --tab-active-background: var(--body-background);
+  --tab-border-color: var(--panel-border-color);
+  --tab-border-radius: calc(10 / var(--rem-base) * 1rem);
+  --tab-border-width: calc(1 / var(--rem-base) * 1rem);
+  --tab-height: calc(45 / var(--rem-base) * 1rem);
+  --tab-font-color: var(--body-font-color);
+  --tab-font-weight: var(--body-font-weight-bold);
+  --tab-line-height: 1;
+  --tab-padding: calc(27 / var(--rem-base) * 1rem);
+  --tab-content-padding: calc(22.5 / var(--rem-base) * 1rem);
+  --tab-spacing: calc(4.5 / var(--rem-base) * 1rem);
+
+  /* Devportal Colors */
+
+  --branding-bg-color: var(--blue);
+
+  --branding-menu-color: var(--white);
+
+  --branding-button-bg: var(--blue);
+  --branding-button-border-color: var(--blue);
+  --branding-button-hover-color: var(--blue);
+  --branding-button-focus-color: var(--blue);
+
+  --branding-container-header-color: var(--branding-bg-color);
+
+  --alert-color-hover: var(--red);
+
+  --branding-grey-color-fill: #bab6b9;
+  --branding-color-green: #0F9D58;
+  --branding-lightorange: #ffa500;
+  --branding-color-red: #CF303A;
+
+  --branding-message-error: var(--branding-color-red);
+  --branding-message-warn: var(--branding-lightorange);
+  --branding-message-success: var(--branding-color-green);
+  --branding-message-info: var(--branding-grey-color-fill);
+
+  --branding-status-active: var(--branding-color-green);
+  --branding-status-inactive: var(--branding-lightorange);
+  --branding-status-retired: var(--branding-grey-color-fill);
+
   /* fonts */
   --rem-base: 18; /* used to compute rem value from desired pixel value (e.g., calc(18 / var(--rem-base) * 1rem) = 18px) */
   --body-font-size: 1.0625em; /* 17px */

@@ -3,3 +3,16 @@ title: Antora Default UI
 version: master
 nav:
 - modules/ROOT/nav.adoc
+
+
+asciidoc:
+  attributes:
+    experimental: ''
+    idprefix: '@'
+    idseparator: '-@'
+    tabs: tabs
+    toc: ~
+    xrefstyle: short
+  extensions:
+  - ./lib/openblock.js
+  - ./lib/tabs-block.js
