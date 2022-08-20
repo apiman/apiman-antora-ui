@@ -1,5 +1,4 @@
 = Sidebar Styles
-:navtitle: Sidebars
 
 This page describes the in-page sidebar block styles, not the styles for the navigation sidebar.
 

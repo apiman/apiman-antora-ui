@@ -1,5 +1,4 @@
 = Inline Text Styles
-:navtitle: Inline Text
 :example-caption!:
 
 ////
