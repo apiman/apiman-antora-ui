@@ -60,6 +60,7 @@
     width: 200px;
   }
 
+  /* Maintainer message Apiman on left */
   .MaintainerMessage::before {
     width: 1px;
     height: 1px;
@@ -89,6 +90,11 @@
     max-width: 50rem;
     min-width: 0
   }
+}
+
+/* H4 not clear enough, by default */
+.h4 {
+  font-weight: bold !important;
 }
 
 
