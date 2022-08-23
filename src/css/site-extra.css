@@ -93,7 +93,7 @@
 }
 
 /* H4 not clear enough, by default */
-.h4 {
+h4 {
   font-weight: 900 !important;
 }
 
