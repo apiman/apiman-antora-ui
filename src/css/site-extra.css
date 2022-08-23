@@ -59,6 +59,18 @@
   #search-input {
     width: 200px;
   }
+
+  .MaintainerMessage::before {
+    width: 1px;
+    height: 1px;
+    content: url("../img/apiman/apiman-dude-separate.png");
+    top: 0;
+    left: 0;
+    transform: translateX(-4rem) translateY(-2rem);
+    position: relative;
+    overflow: visible;
+    display: block;
+  }
 }
 
 .doc .image.conum > img {
@@ -78,3 +90,5 @@
     min-width: 0
   }
 }
+
+
